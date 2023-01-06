@@ -1,13 +1,15 @@
 import "./App.css";
-import CardClassProps from "./classbased/CardClassProps";
+
+import PropsTypesCheck from "./classbased/PropsTypesCheck";
 
 const App = () => {
   return (
     <div>
       <h1>React Application</h1>
-      <CardClassProps cardsColor="red" />
-      <CardClassProps width={200} height={200} />
-      <CardClassProps cardsColor="blue" />
+
+      <PropsTypesCheck cardColor={"red"} width={121} />
+      <PropsTypesCheck cardColor={"blue"} />
+      <PropsTypesCheck cardColor={"pink"} height={212} />
     </div>
   );
 };
