@@ -1,14 +1,14 @@
-import { withPointlessHOC } from "./HOC/withPointlessHOC";
-import { withExtraPropsAdded } from "./HOC/withExtraPropsAdded";
+import Movie from "./Components/Movie";
+import Favorite from "./Components/Favorite";
 
-const App = (props) => {
-  console.log(props);
+const App = () => {
   return (
     <div className="app">
-      <h1>React Application</h1>
-      <h2>{props.anotherProps}</h2>
+      <Movie />
+      <hr />
+      <Favorite />
     </div>
   );
 };
 
-export default withExtraPropsAdded(App);
+export default App;
