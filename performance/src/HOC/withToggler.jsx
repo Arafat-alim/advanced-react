@@ -4,23 +4,25 @@ import React, { Component } from "react";
 class Toggler extends Component {
   //! state
   state = {
-    show: false,
+    on: false,
   };
   //! Methods
   toggle = () => {
     this.setState((prevState) => {
       return {
-        show: !prevState.show,
+        on: !prevState.on,
       };
     });
   };
   render() {
     const Component = this.props.component;
-    return <Component {...this.props} toggle={toggle} on={this.state.show} />;
+    return (
+      <Component {...this.props} toggle={this.toggle} on={this.state.on} />
+    );
   }
 }
 
-export function withTOggler(component) {
+export function withToggler(component) {
   return function (props) {
     return <Toggler component={component} {...props} />;
   };

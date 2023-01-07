@@ -1,24 +1,27 @@
 import { Component } from "react";
+import { withToggler } from "../HOC/withToggler";
 
 class Movie extends Component {
-  //! state
-  state = {
-    on: true,
-  };
-  //! method toggler
-  toggler = () => {
-    this.setState((prevState) => {
-      return {
-        on: !prevState.on,
-      };
-    });
-  };
+  //! state coming from the props via HOC
+  //   state = {
+  //     on: true,
+  //   };
+  //! method toggler - coming from the props via HOC
+  //   toggler = () => {
+  //     this.setState((prevState) => {
+  //       return {
+  //         on: !prevState.on,
+  //       };
+  //     });
+  //   };
   render() {
     return (
       <div>
-        <button onClick={this.toggler}>Show More</button>
+        <button onClick={this.props.toggle}>
+          {this.props.on ? "Show More" : "Hide Me"}
+        </button>
 
-        <nav style={{ display: this.state.on ? "none" : "block" }}>
+        <nav style={{ display: this.props.on ? "none" : "block" }}>
           <h3>Home</h3>
           <h3>About</h3>
           <h3>Contact</h3>
@@ -29,4 +32,4 @@ class Movie extends Component {
   }
 }
 
-export default Movie;
+export default withToggler(Movie);
