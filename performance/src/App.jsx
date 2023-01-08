@@ -1,3 +1,4 @@
+import { useLayoutEffect } from "react";
 import BasicRenderProp from "./Components/BasicRenderProp";
 
 const App = () => {
@@ -8,9 +9,19 @@ const App = () => {
           return <h1>Hey There! {name}</h1>;
         }}
       /> */}
-      <BasicRenderProp
+      {/* <BasicRenderProp
         render={function (number) {
           return <h1>{number % 2 === 0 ? "Even" : "Odd"}</h1>;
+        }} */}
+      <BasicRenderProp
+        render={function (arr) {
+          return arr.map((item, index) => {
+            return (
+              <ul key={index}>
+                <li>{item}</li>
+              </ul>
+            );
+          });
         }}
       />
     </div>
