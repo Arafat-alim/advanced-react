@@ -4,7 +4,7 @@ import React, { Component } from "react";
 class Toggler extends Component {
   //! state
   state = {
-    on: false,
+    on: this.props.defaultOnValue,
   };
   //! Methods
   toggle = () => {
@@ -22,8 +22,14 @@ class Toggler extends Component {
   }
 }
 
-export function withToggler(component) {
+export function withToggler(component, optionObj) {
   return function (props) {
-    return <Toggler component={component} {...props} />;
+    return (
+      <Toggler
+        component={component}
+        defaultOnValue={optionObj.defaultOnValue}
+        {...props}
+      />
+    );
   };
 }

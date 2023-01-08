@@ -29,4 +29,4 @@ class Favorite extends Component {
   }
 }
 
-export default withToggler(Favorite);
+export default withToggler(Favorite, { defaultOnValue: false });

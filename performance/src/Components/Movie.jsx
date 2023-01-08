@@ -18,10 +18,10 @@ class Movie extends Component {
     return (
       <div>
         <button onClick={this.props.toggle}>
-          {this.props.on ? "Show More" : "Hide Me"}
+          {this.props.on ? "Hide" : "More"}
         </button>
 
-        <nav style={{ display: this.props.on ? "none" : "block" }}>
+        <nav style={{ display: this.props.on ? "block" : "none" }}>
           <h3>Home</h3>
           <h3>About</h3>
           <h3>Contact</h3>
@@ -32,4 +32,4 @@ class Movie extends Component {
   }
 }
 
-export default withToggler(Movie);
+export default withToggler(Movie, { defaultOnValue: true });
