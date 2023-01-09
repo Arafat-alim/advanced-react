@@ -4,8 +4,8 @@ import Toggler from "./Toggler";
 function MenuRenderProps() {
   return (
     <Toggler
-      //   defaultOnValue={true}
-      render={function (on, toggle) {
+      defaultOnValue={true}
+      render={function ({ on, toggle }) {
         return (
           <div>
             <button onClick={toggle}>{on ? "Hide" : "Show"}</button>

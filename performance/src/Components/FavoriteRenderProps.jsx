@@ -6,11 +6,10 @@ function FavoriteRenderProps() {
   return (
     <>
       <Toggler
-        // defaultOnValue={false}
-        render={function (on, toggle) {
+        defaultOnValue={false}
+        render={function ({ on, toggle }) {
           return (
             <div>
-              {console.log(on, toggle)}
               <h1>Click Here for favourite</h1>
               <span onClick={toggle} style={{ cursor: "pointer" }}>
                 {on ? "❤" : "👏"}
