@@ -1,12 +1,9 @@
-import FavoriteRenderProps from "./Components/FavoriteRenderProps";
-import MenuRenderProps from "./Components/MenuRenderProps";
+import AppComponent from "./Components/AppComponent";
 
 const App = () => {
   return (
     <div className="app">
-      <MenuRenderProps />
-      <hr />
-      <FavoriteRenderProps />
+      <AppComponent />
     </div>
   );
 };
