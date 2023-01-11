@@ -1,11 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { ThemeContextConsumer } from "./themeContext.jsx";
 
-function Button(props) {
+function Button() {
   return (
-    <button className={`${props.theme}-theme`} style={{ cursor: "pointer" }}>
-      Switch Theme
-    </button>
+    <ThemeContextConsumer>
+      {(context) => (
+        <button
+          className={`${context.theme}-theme`}
+          style={{ cursor: "pointer" }}
+          onClick={context.toggleTheme}
+        >
+          Switch Theme
+        </button>
+      )}
+    </ThemeContextConsumer>
   );
 }
 

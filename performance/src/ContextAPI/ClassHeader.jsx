@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import UserContext from "./userContext";
+import {UserContext} from "./userContext";
 
 class ClassHeader extends Component {
   static contextType = UserContext;

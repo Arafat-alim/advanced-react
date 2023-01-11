@@ -1,12 +1,12 @@
 import React from "react";
 import FunctionApp from "./FunctionApp";
-import ThemeContext from "./themeContext";
+import { ThemeContext } from "./themeContext";
 
 function MainApp() {
   return (
-    <ThemeContext.Provider value={"dark"}>
+    <ThemeContext>
       <FunctionApp />
-    </ThemeContext.Provider>
+    </ThemeContext>
   );
 }
 
