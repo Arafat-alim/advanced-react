@@ -1,10 +1,13 @@
-import AppComponent from "./Components/AppComponent";
+import ClassApp from "./ContextAPI/ClassApp";
+import UserContext from "./ContextAPI/userContext";
 
 const App = () => {
   return (
-    <div className="app">
-      <AppComponent />
-    </div>
+    <UserContext.Provider value={"Arafat"}>
+      <div className="app">
+        <ClassApp />
+      </div>
+    </UserContext.Provider>
   );
 };
 
