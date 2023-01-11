@@ -1,14 +1,7 @@
-import ClassApp from "./ContextAPI/ClassApp";
-import UserContext from "./ContextAPI/userContext";
+import MainApp from "./ContextAPI/ThemeSwitcher/MainApp";
 
 const App = () => {
-  return (
-    <UserContext.Provider value={"Arafat"}>
-      <div className="app">
-        <ClassApp />
-      </div>
-    </UserContext.Provider>
-  );
+  return <MainApp />;
 };
 
 export default App;
