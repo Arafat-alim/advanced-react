@@ -1,7 +1,7 @@
-import MainApp from "./ContextAPI/ThemeSwitcher/MainApp";
+import FormIndex from "./ContextAPI/FormCollection/FormIndex";
 
 const App = () => {
-  return <MainApp />;
+  return <FormIndex />;
 };
 
 export default App;
