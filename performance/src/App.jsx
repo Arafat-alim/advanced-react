@@ -1,7 +1,7 @@
-import InputForm from "./hooks/InputForm";
+import Counter from "./hooks/Counter";
 
 const App = () => {
-  return <InputForm />;
+  return <Counter />;
 };
 
 export default App;
