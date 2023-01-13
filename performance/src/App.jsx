@@ -1,7 +1,7 @@
-import FormIndex from "./ContextAPI/FormCollection/FormIndex";
+import Counter from "./hooks/Counter";
 
 const App = () => {
-  return <FormIndex />;
+  return <Counter />;
 };
 
 export default App;
