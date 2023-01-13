@@ -1,7 +1,7 @@
-import Counter from "./hooks/Counter";
+import CounterPro from "./hooks/CounterPro";
 
 const App = () => {
-  return <Counter />;
+  return <CounterPro />;
 };
 
 export default App;
