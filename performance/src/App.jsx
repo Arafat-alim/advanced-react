@@ -1,7 +1,8 @@
 import GameIndex from "./hooks/speedTypingGame/GameIndex";
+import TodoList from "./hooks/TodoList";
 
 const App = () => {
-  return <GameIndex />;
+  return <TodoList />;
 };
 
 export default App;
