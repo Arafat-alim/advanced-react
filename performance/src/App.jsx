@@ -1,7 +1,7 @@
-import CounterPro from "./hooks/CounterPro";
+import GameIndex from "./hooks/speedTypingGame/GameIndex";
 
 const App = () => {
-  return <CounterPro />;
+  return <GameIndex />;
 };
 
 export default App;
