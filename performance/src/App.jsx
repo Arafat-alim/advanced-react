@@ -1,7 +1,7 @@
-import CustomApp from "./CustomHooks/CustomApp";
+import CustomIndex from "./CustomHooks/myApp/CustomIndex";
 
 const App = () => {
-  return <CustomApp />;
+  return <CustomIndex />;
 };
 
 export default App;
