@@ -1,12 +1,12 @@
 import React from "react";
 import FunctionApp from "./FunctionApp";
-import { ThemeContext } from "./themeContext";
+import { ThemeContextProvider } from "./themeContext";
 
 function MainApp() {
   return (
-    <ThemeContext>
+    <ThemeContextProvider>
       <FunctionApp />
-    </ThemeContext>
+    </ThemeContextProvider>
   );
 }
 

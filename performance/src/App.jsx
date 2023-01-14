@@ -1,7 +1,7 @@
-import GameIndex from "./hooks/speedTypingGame/GameIndex";
+import MainApp from "./ContextAPI/ThemeSwitcher/MainApp";
 
 const App = () => {
-  return <GameIndex />;
+  return <MainApp />;
 };
 
 export default App;
