@@ -9,6 +9,7 @@ function useContext() {
     setCount((prevCount) => prevCount + 1);
   };
 
+  //   return { count, addition };
   return [count, addition];
 }
 
