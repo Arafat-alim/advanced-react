@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 function GameApp() {
   const STARTING_COUNT = 5;
@@ -6,6 +6,7 @@ function GameApp() {
   const [timeRemaining, setTimeRemaining] = useState(STARTING_COUNT);
   const [isTimeRunning, setIsTimeRunning] = useState(false);
   const [countWord, setCountWord] = useState(0);
+  const textBoxRef = useRef(null);
 
   const handleChange = (e) => {
     const { value } = e.target;
@@ -23,6 +24,8 @@ function GameApp() {
 
     setCountWord(0);
     setText("");
+    textBoxRef.current.disabled = false;
+    textBoxRef.current.focus();
   };
   const endGame = () => {
     setIsTimeRunning(false);
@@ -48,6 +51,7 @@ function GameApp() {
         disabled={!isTimeRunning}
         onChange={handleChange}
         placeholder="Enter your Sentence"
+        ref={textBoxRef}
       />
       <h4>Time Remaining: {timeRemaining}</h4>
       <button onClick={startGame} disabled={isTimeRunning}>

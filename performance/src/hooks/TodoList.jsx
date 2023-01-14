@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react";
 function TodoList() {
   const [todoValue, setTodoValue] = useState("");
   const [todoList, setTodoList] = useState([]);
-  const inputRef = useRef();
+  const inputRef = useRef(null);
 
   const handleChange = (e) => {
     setTodoValue(e.target.value);
