@@ -1,7 +1,7 @@
-import MainApp from "./ContextAPI/ThemeSwitcher/MainApp";
+import CustomApp from "./CustomHooks/CustomApp";
 
 const App = () => {
-  return <MainApp />;
+  return <CustomApp />;
 };
 
 export default App;
