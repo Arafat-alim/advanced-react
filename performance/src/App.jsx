@@ -1,7 +1,7 @@
-import Gameindex from "./hooks/speedTypingGame/GameIndex";
+import RouterIndex from "./React-Router-DOM/RouterIndex";
 
 const App = () => {
-  return <Gameindex />;
+  return <RouterIndex />;
 };
 
 export default App;
