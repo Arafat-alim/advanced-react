@@ -23,13 +23,23 @@ function RouterApp() {
       </nav>
 
       <Switch>
-        <Route exact path="/">
-          <RouterHome />
-        </Route>
+        <Route
+          exact
+          path="/"
+          render={({ match, location, history, staticContext }) => (
+            <RouterHome
+              match={match}
+              location={location}
+              history={history}
+              staticContext={staticContext}
+              customeProps={"Hlloe"}
+            />
+          )}
+        />
         <Route exact path="/about">
-          <RouterAbout />
+          <RouterAbout customProps={"customProps"} />
         </Route>
-        <Route exact path="/">
+        <Route exact path="/contact">
           <RouterContact />
         </Route>
       </Switch>
